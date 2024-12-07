@@ -46,3 +46,75 @@ const nestedMuppet = {
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+// String Destructuring for Animal Sounds
+const animalSounds = {
+  moo: "cow",
+  neigh: "horse",
+  baa: "sheep",
+  oink: "pig",
+  cluck: "chicken",
+};
+
+const { moo, neigh, baa, oink, cluck } = animalSounds;
+
+// String Destructuring for Traditional Animal Names
+const animalNames = {
+  bessie: "cow",
+  dolly: "sheep",
+  babe: "pig",
+  little: "chicken",
+};
+
+const { bessie, dolly, babe, little } = animalNames;
+
+// String Destructuring for Traditional Animal Colors
+const animalColors = {
+  blackAndWhite: "cow",
+  black: "sheep",
+  pink: "pig",
+};
+
+const { blackAndWhite, black, pink } = animalColors;
+
+// Array Destructuring for Rainbow Colors
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+const [red, orange, yellow, green, blue, indigo, violet] = rainbowColors;
+
+// Array Destructuring for Rainbow Color Initials
+const [r, o, y, g, b, , v] = rainbowColors; // Skipping indigo here
+
+// Array Destructuring for Indigo Only
+const [, , , , , indg] = rainbowColors;
+
+// Object Destructuring for Muppet Variables
+// const muppet = {
+//   muppetName: "Miss Piggy",
+//   color: "pink",
+//   song: "Never Before, Never Again",
+//   job: "Cast member of The Muppet Show",
+//   partner: "Kermit",
+// };
+
+// ive kept a comment for muppet as there is one near the top of the line but the one above is remaining for reference
+const { muppetName, color, song, job, partner } = muppet;
+
+// // Object with Nested Destructuring
+// const nestedMuppet = {
+//   nestedName: "Kermit",
+//   nestedColor: "green",
+//   album: {
+//     theMuppetMovie: {
+//       song1: "Rainbow Connection",
+//       song2: "Moving Right Along",
+//       song3: "Never Before, Never Again",
+//       song4: "I Hope That Something Better Comes Along",
+//     },
+//   },
+//   nestedJob: "Host of The Muppet Show",
+//   nestedPartner: "Miss Piggy",
+// };
+
+// did the same thing as i mentioned in muppet that the code is present at the beggining of code
+const { album: { theMuppetMovie: { song2, song4 } }, nestedJob, nestedPartner } = nestedMuppet;
